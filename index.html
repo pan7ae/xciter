@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Xciter web</title>
+	<link rel="stylesheet" href="https://unpkg.com/flexboxgrid2@7.2.1/flexboxgrid2.min.css">
+	<link rel="stylesheet" href="css/nullstyle.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<!-- Шапка сайта -->
+	<header>
+		<nav class="container">
+			<img src="source/img/XCITER_web_logo_white.svg" alt="XCITER" srcset="">
+			<ul class="col-xl-4">
+				<li><a href="">About</a></li>
+				<li><a href="">First</a></li>
+				<li><a href="https://www.tsu.ru/">Second</a></li>
+				<li><a href="">Something</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<!-- Основное тело -->
+	<main class="container">
+		<div class="row">
+			<!-- Левая часть -->
+			<div class="col-xl-6">
+				<!-- Integration -->
+				<form action="">
+					<fieldset id="Integration">
+						<legend>
+							Integration
+						</legend>
+						<div class="integration__inside row">
+							<!-- Order -->
+							<div>
+								<p>Order</p>
+								<input type="number" name="" id="" min="10" max="20" step="1" value="12">
+							</div>
+							<!-- Iters per step -->
+							<div>
+								<p>Iters per step</p>
+								<input type="number" name="" id="" min="10" max="20" step="1" value="12">
+							</div>
+							<!-- Accuracy -->
+							<div>
+								<p>Accuracy</p>
+								<input type="number" name="" id="" min="10" max="20" step="1" value="12">
+							</div>
+						</div>
+					</fieldset>
+				</form>
+				<div class="row" id="second__row">
+					<!-- Fitting -->
+					<form action="" class="col-xl-6">
+						<fieldset id="fitting">
+							<legend>
+								<input type="checkbox" name="" id="fitting__disable"
+									onchange="toggleDisable(this, 'fitting')" checked>
+								<label for="fitting__disable">Fitting</label>
+							</legend>
+							<div class="fitting__inside row">
+								<div>
+									<p>Obs File</p>
+									<input type="file" name="" id="">
+								</div>
+								<div>
+									<p>Accuracy</p>
+									<input type="number" name="" id="" min="10" max="20" step="1" value="12">
+								</div>
+								<div>
+									<p>Rejection times</p>
+									<input type="number" name="" id="" min="10" max="20" step="1" value="12">
+								</div>
+								<div>
+									<input type="checkbox" name="" id="preliminaryOrbits">
+									<label for="preliminaryOrbits">Preliminary orbits</label>
+								</div>
+								<div>
+									<input type="checkbox" name="" id="delicateMode">
+									<label for="delicateMode">Delicate mode</label>
+								</div>
+							</div>
+
+						</fieldset>
+					</form>
+					<!-- Prediction -->
+					<form action="" class="col-xl-6">
+						<fieldset id="prediction">
+							<legend>
+								<input type="checkbox" name="" id="prediction__disable"
+									onchange="toggleDisable(this, 'prediction')" checked>
+								<label for="prediction__disable">Prediction</label>
+							</legend>
+							<div class="prediction__inside row">
+								<div>
+									<p>Date</p>
+									<input type="datetime-local" name="" id="" value="">
+								</div>
+								<div>
+									<p>Hazard. dist. (km)</p>
+									<input type="text" name="" id="" min="10" max="20" step="1" value="12">
+								</div>
+								<div>
+									<p>Number of VAs</p>
+									<input type="number" name="" id="" min="10" max="20" step="1" value="12">
+								</div>
+								<div>
+									<p>VAs accuracy (AU)</p>
+									<input type="number" name="" id="" min="10" max="20" step="1" value="12">
+								</div>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+				<!-- Parametrs -->
+				<form action="" id="parametrs">
+					<fieldset>
+						<legend>Parametrs</legend>
+						<div class="parametrs__inside row">
+							<div>
+								<p>Epoch (JD)</p>
+								<input type="text" name="" id="" min="10" max="20" step="1" value="12">
+							</div>
+							<div>
+								<p>State (AU & AU/dys) - Cov. Matrix</p>
+								<div class="textwrapper">
+									<textarea name="" id="" cols="30" rows="10"></textarea>
+								</div>
+							</div>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+
+			<!-- Правая часть -->
+			<div class="col-xl-6">
+				<div class="right__side">
+					col-xl-6
+				</div>
+			</div>
+		</div>
+
+	</main>
+
+	<div id="loader" style="font-size: 36px;">
+		<div>Loading...</div>
+	</div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/script.js"></script>
+
+</html>
